@@ -10,7 +10,10 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 echo "Cloning repository..."
-                git branch: 'main', url: 'https://github.com/manjub-git-hub/sample-node-app.git'
+                git branch: 'main',
+    url: 'https://github.com/manjub-git-hub/sample-node-app.git',
+    credentialsId: 'github-creds'
+
             }
         }
 
